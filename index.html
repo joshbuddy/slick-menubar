@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+p, button {
+  font-family: sans-serif;
+}
+
+#quit {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+    </style>
+
+  </head>
+  <body>
+    <p><input type="checkbox" id="web">Web <input type="text" name="port"></p>
+    <p><input type="checkbox" id="fuse">Fuse</p>
+
+    <p><button id="quit">Quit</button></p>
+  </body>
+
+<script>
+  const electron = require('electron');
+  const remote = electron.remote;
+  const manager = remote.getGlobal('manager');
+  const exitManager = remote.getGlobal('exitManager');
+  const webCheckbox = document.getElementById('web');
+  webCheckbox.addEventListener('change', e => {
+  });
+
+  const quitButton = document.getElementById('quit');
+  quitButton.addEventListener('click', e => {
+    exitManager();
+  });
+
+  var webElement = document.getElementById('web');
+
+</script>
+
+</html>
