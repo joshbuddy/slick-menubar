@@ -6,5 +6,5 @@ build:
 
 package: package-osx
 
-package-osx:
-	./node_modules/.bin/electron-packager . Slick --platform=darwin --arch=x64 --version=0.37.4
+package-osx: build
+	./node_modules/.bin/electron-packager . Slick --platform=darwin --arch=x64 --version=0.37.4 --overwrite
